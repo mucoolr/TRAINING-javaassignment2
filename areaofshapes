@@ -1,0 +1,48 @@
+import java.util.*; 
+
+public class MyClass {
+    
+    
+    public static void main(String args[]) {
+      System.out.println("Press 1 to find area of square");
+      System.out.println("Press 2 to find area of triangle");
+      System.out.println("Press 3 to finb area of rectangle");
+      Scanner sc= new Scanner(System.in);
+      int num=sc.nextInt(); 
+      
+      
+      switch(num){
+          case 1:
+         
+          System.out.println("Enter length of side of SQUARE");
+          int length=sc.nextInt();
+          int area=length*length;
+          System.out.println(area);
+          break;
+          
+          
+          case 2:
+          
+          System.out.println("Enter base of triangle");
+          double base=sc.nextFloat();
+          System.out.println("Enter height of triangle");
+          double height=sc.nextFloat();
+          double area_triangle=0.5*base*height;
+          System.out.println(area_triangle);
+          break;
+          
+          case 3:
+          
+          System.out.println("Enter length of rectangle");
+          int length_rectangle=sc.nextInt();
+          System.out.println("Enter breadth of rectangle");
+          int breadth=sc.nextInt();
+          int area_rectangle=length_rectangle*breadth;
+          System.out.println(area_rectangle);
+          break;
+          
+          default:
+          System.out.println("no match");
+      }
+    }
+}
