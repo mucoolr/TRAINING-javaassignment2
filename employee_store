@@ -1,0 +1,48 @@
+import java.util.Map;
+import java.util.HashMap;
+import java.util.*;  
+
+public class MyClass {
+    public static void main(String args[]) {
+        HashMap< Integer, String> employee_list = new HashMap<>();
+        employee_list.put(1,"rakesh");
+        employee_list.put(2,"suresh");
+        System.out.println("Press 1 to add an employee ");
+        System.out.println("Press 2 to delete an employee");
+        System.out.println("Press 3 to get no. of employees");
+        System.out.println("Press 4 to get employee by ID");
+        
+        Scanner sc = new Scanner(System.in);
+        int num=sc.nextInt();
+        
+        switch(num){
+            
+            case 1:
+                System.out.println("enter employee ID");
+                int id=sc.nextInt();
+                System.out.println("enter employee name");
+                String name= sc.next();
+                employee_list.put(id,name);
+                System.out.println(employee_list);
+                break;
+            
+            case 2:
+                System.out.println("enter id no. to delete an employee");
+                int id_remove = sc.nextInt();
+                String value =employee_list.remove(id_remove);
+                System.out.println(employee_list);
+                break;
+                
+            case 3:
+                System.out.println(employee_list.size());
+                
+            case 4:
+                System.out.println("enter id no. to get employee name");
+                int id_getemployee=sc.nextInt();
+                System.out.println(employee_list.get(id_getemployee));
+            
+            default: 
+               break;
+        }
+    }
+}
